@@ -1,5 +1,5 @@
 ![Measurelab logo](/measurelab_black.png)
-# [Project or Client index]
-This is a description of your project or client, with space below it to record further detail or a list of contents.
+ 
+AT Measurelab we're passionate about anything analytics and focus specifically on the Google Marketing and Google Cloud Platform.  This repository contains the snippets our Data Sciennce and Enginneering team share on our blog to help you put your GCP skills into action.
 
-## [More detail or contents title]
+## It's all about the schema
