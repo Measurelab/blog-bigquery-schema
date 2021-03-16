@@ -4,7 +4,11 @@ CREATE OR REPLACE TABLE
 PARTITION BY
   date
 CLUSTER BY
-  unique_visits OPTIONS ( description="A table with a date partition" ) AS (
+  unique_visits OPTIONS ( description="A table with a date partition",
+    labels=[("testing",
+      "measurelab_is_great")],
+      expiration_timestamp=TIMESTAMP "2023-01-01 00:00:00 UTC"
+    ) AS (
   SELECT
     DATE(TIMESTAMP_SECONDS( visitStartTime)) AS date,
     COUNT(DISTINCT(visitid)) AS unique_visits
