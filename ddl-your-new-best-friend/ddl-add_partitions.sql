@@ -2,7 +2,9 @@ CREATE OR REPLACE TABLE
   `testing.insert` (date DATE OPTIONS( description='date' ),
     unique_visits INT64 OPTIONS( description='counts' ))
 PARTITION BY
-  date OPTIONS ( description="A table with a date partition" ) AS (
+  date
+CLUSTER BY
+  unique_visits OPTIONS ( description="A table with a date partition" ) AS (
   SELECT
     DATE(TIMESTAMP_SECONDS( visitStartTime)) AS date,
     COUNT(DISTINCT(visitid)) AS unique_visits
