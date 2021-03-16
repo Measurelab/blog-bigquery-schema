@@ -1,4 +1,4 @@
-CREATE OR REPLACE TABLE
+CREATE TABLE
   `testing.insert` (date DATE OPTIONS( description='date' ),
     unique_visits INT64 OPTIONS( description='counts' ))
 PARTITION BY
@@ -18,3 +18,4 @@ CLUSTER BY
     _table_suffix = '20170801'
   GROUP BY
     1);
+    
